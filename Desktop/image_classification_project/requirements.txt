@@ -1,0 +1,5 @@
+matplotlib.pyplot
+numpy
+tensorflow 
+tensorflow_datasets
+keras
