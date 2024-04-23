@@ -1,38 +1,47 @@
 # data_loader.py
 
-import tensorflow_datasets as tfds
+import os
 import numpy as np
+import cv2
 
-def load_data():
+def load_data(data_dir):
     """
-    Load Rock Paper Scissors dataset from TensorFlow Datasets.
+    Load images from the specified directory.
+    Args:
+        data_dir: Directory containing images.
     Returns:
-        dataset: TensorFlow dataset containing images and labels.
+        images: List of loaded images.
+        labels: List of corresponding labels.
     """
-    dataset, info = tfds.load('rock_paper_scissors', with_info=True, as_supervised=True)
-    return dataset
+    images = []
+    labels = []
+    
+    for label in os.listdir(data_dir):
+        label_dir = os.path.join(data_dir, label)
+        if os.path.isdir(label_dir):
+            for img_file in os.listdir(label_dir):
+                img_path = os.path.join(label_dir, img_file)
+                img = cv2.imread(img_path)
+                if img is not None:
+                    images.append(img)
+                    labels.append(label)
+    
+    return images, labels
 
-def preprocess_data(dataset):
+def preprocess_data(images, labels):
     """
     Preprocess images and labels.
     Args:
-        dataset: TensorFlow dataset containing images and labels.
+        images: List of images.
+        labels: List of corresponding labels.
     Returns:
         processed_images: Preprocessed images as NumPy array.
         processed_labels: Preprocessed labels as NumPy array.
     """
-    images = []
-    labels = []
-    for image, label in dataset:
-        # Resize images to a fixed size (e.g., 100x100)
-        image = tf.image.resize(image, (100, 100))
-        # Normalize pixel values
-        image = image / 255.0
-        images.append(image.numpy())
-        labels.append(label.numpy())
+    # Convert images to NumPy array and normalize pixel values
+    processed_images = np.array(images, dtype=np.float32) / 255.0
     
-    processed_images = np.array(images)
+    # Convert labels to NumPy array
     processed_labels = np.array(labels)
     
     return processed_images, processed_labels
-

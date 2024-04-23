@@ -1,40 +1,44 @@
-# Image Classification of Rock Paper Scissors Dataset
+# Image Classification Project
 
-This project aims to build a machine learning model to classify images of rock, paper, and scissors hand gestures using the Rock Paper Scissors Dataset.
+This project is a simple image classification application built using Flask and TensorFlow. It allows users to upload images of rock, paper, or scissors, and the application predicts the class of the uploaded image using a pre-trained deep learning model.
 
-## Overview
+## Features
 
-The Rock Paper Scissors Dataset consists of images of hands in various positions representing rock, paper, and scissors gestures. The goal of this project is to develop a model that can accurately classify these hand gestures.
+- Upload images of rock, paper, or scissors.
+- Classify uploaded images into one of the three classes.
+- Display the predicted class label.
 
-## Project Structure
+## Requirements
 
-The project structure is organized as follows:
+- Python 3.x
+- Flask
+- TensorFlow
+- PIL (Python Imaging Library)
 
-- **data/**: Contains the dataset split into training, validation, and test sets.
-- **notebooks/**: Contains the Jupyter notebook `practiceofimageclassification.ipynb` for the image classification project.
-- **src/**: Contains Python source code for data loading (`data_loader.py`), model definition (`model.py`), and training (`train.py`).
-- **README.md**: Provides an overview of the project and project structure (you're reading it right now!).
+## Installation
 
-## Getting Started
+1. Clone the repository:
 
-To get started with this project, follow these steps:
+   ```bash
+   git clone https://github.com/your_username/image-classification-project.git
 
-1. Clone this repository to your local machine:
+## Install dependencies
 
-    ```bash
-    git clone https://github.com/SulemanShahani/Image-Classification-of-Rock-Paper-Scissors-Dataset.git
-    ```
+cd image-classification-project
+pip install -r requirements.txt
 
-2. Install the required dependencies:
+## Usage
 
-    ```bash
-    pip install -r requirements.txt
-    ```
+Start the Flask application:
 
-3. Download the Rock Paper Scissors Dataset and place it in the `data/` directory.
+python app.py
+Open a web browser and go to <http://localhost:5000>.
+Upload an image using the provided form.
+Click the "Upload" button to classify the uploaded image.
 
-4. Open and run the Jupyter notebook `practiceofimageclassification.ipynb` to explore the project code and execute the image classification pipeline.
+## Acknowledgments
 
-## Contributing
+The pre-trained image classification model used in this project is based on TensorFlow's official tutorials.
+Inspiration for this project came from [https://github.com/KeithGalli].
 
-Contributions to this project are welcome! If you have any ideas for improvement or would like to contribute code, feel free to fork the repository and submit a pull request.
+Feel free to use this corrected version in your README.md file!
