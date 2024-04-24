@@ -27,7 +27,12 @@ This project is a simple image classification application built using Flask and 
 cd image-classification-project
 pip install -r requirements.txt
 
+## Install TensorFlow
+
+Since TensorFlow files are large and not included in this repository, you will need to install TensorFlow separately. Please refer to the official TensorFlow installation guide for instructions on how to install it for your system: TensorFlow Installation Guide
+
 ## Download Trained Model
+
 You can download the pre-trained model file from Google Drive link [https://drive.google.com/file/d/1peTHWuyQSe-Rr2rEQBlm8B9p2DHy2f1E/view?usp=drive_link]. Once downloaded, place the model file in the root directory of the project.
 
 ## Usage
