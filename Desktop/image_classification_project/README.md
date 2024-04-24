@@ -20,12 +20,15 @@ This project is a simple image classification application built using Flask and 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your_username/image-classification-project.git
+   git clone https://github.com/SulemanShahani/Image-Classification-of-Rock-Paper-Scissors-Dataset
 
 ## Install dependencies
 
 cd image-classification-project
 pip install -r requirements.txt
+
+## Download Trained Model
+You can download the pre-trained model file from Google Drive link [https://drive.google.com/file/d/1peTHWuyQSe-Rr2rEQBlm8B9p2DHy2f1E/view?usp=drive_link]. Once downloaded, place the model file in the root directory of the project.
 
 ## Usage
 
@@ -40,5 +43,3 @@ Click the "Upload" button to classify the uploaded image.
 
 The pre-trained image classification model used in this project is based on TensorFlow's official tutorials.
 Inspiration for this project came from [https://github.com/KeithGalli].
-
-Feel free to use this corrected version in your README.md file!
