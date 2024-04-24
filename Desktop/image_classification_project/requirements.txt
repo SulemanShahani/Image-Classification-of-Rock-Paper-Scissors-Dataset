@@ -1,8 +1,0 @@
-matplotlib
-numpy
-tensorflow 
-tensorflow_datasets
-keras
-flask
-opencv-python
-Pillow
