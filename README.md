@@ -1,6 +1,14 @@
 # Image Classification Project
 
-This project is a simple image classification application built using Flask and TensorFlow. It allows users to upload images of rock, paper, or scissors, and the application predicts the class of the uploaded image using a pre-trained deep learning model.
+## Introduction
+
+This project uses the Rock, Paper, Scissors dataset to train a CNN model to classify images into one of three classes: rock, paper, or scissors. The dataset is loaded from TensorFlow Datasets and preprocessed to extract only the red channel from RGB images for simplicity.
+This project is a simple image classification application built using Flask and TensorFlow
+
+
+## Dataset
+
+The dataset used in this project is the Rock, Paper, Scissors dataset provided by TensorFlow Datasets. It contains images of hands in rock, paper, and scissors poses.
 
 ## Features
 
@@ -22,14 +30,18 @@ This project is a simple image classification application built using Flask and 
    ```bash
    git clone https://github.com/SulemanShahani/Image-Classification-of-Rock-Paper-Scissors-Dataset
 
+
+Create and activate a virtual environment:
+
+
+source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+
 ## Install dependencies
 
 cd image-classification-project
 pip install -r requirements.txt
 
-## Install TensorFlow
 
-Since TensorFlow files are large and not included in this repository, you will need to install TensorFlow separately. Please refer to the official TensorFlow installation guide for instructions on how to install it for your system: TensorFlow Installation Guide
 
 ## Download Trained Model
 
