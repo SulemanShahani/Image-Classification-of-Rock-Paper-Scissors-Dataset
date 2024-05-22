@@ -43,9 +43,7 @@ pip install -r requirements.txt
 
 
 
-## Download Trained Model
 
-You can download the pre-trained model file from Google Drive link [https://drive.google.com/file/d/1peTHWuyQSe-Rr2rEQBlm8B9p2DHy2f1E/view?usp=drive_link]. Once downloaded, place the model file in the root directory of the project.
 
 ## Usage
 
