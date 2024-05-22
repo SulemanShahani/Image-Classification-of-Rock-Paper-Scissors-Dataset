@@ -4,7 +4,6 @@ import numpy as np
 import tensorflow as tf
 
 # Define image preprocessing function
-# Define image preprocessing function
 def preprocess_image(image):
     # Resize image to (300, 300)
     image = image.resize((300, 300))
@@ -12,34 +11,28 @@ def preprocess_image(image):
     image = np.array(image)
     # Normalize pixel values to range [0, 1]
     image = image / 255.0
-    # Check if the image is grayscale
+    
+    # Ensure image has a single channel dimension if grayscale
     if len(image.shape) == 2:  # Grayscale image
-        # Add channel dimension
         image = np.expand_dims(image, axis=-1)
-    elif len(image.shape) == 3 and image.shape[2] == 1:  # Grayscale image with channel dimension
-        pass  # No need to change shape
-    elif image.shape[2] == 4:  # RGBA image
-        # Convert RGBA to RGB
+    
+    # Convert RGBA to RGB if needed
+    if image.shape[2] == 4:  # RGBA image
         image = image[:, :, :3]
+    
     # Ensure image has 3 channels (for RGB images)
-    if len(image.shape) == 2 or image.shape[2] == 1:  # Grayscale image
-        # Repeat grayscale channel to create three channels
+    if image.shape[2] == 1:  # Grayscale image with single channel
         image = np.repeat(image, 3, axis=-1)
+    
     # Print shape after preprocessing
     print("Image shape after preprocessing:", image.shape)
     return image
-
-    # Test the function
-
-
-
-
 
 # Initialize Flask application
 app = Flask(__name__)
 
 # Load trained model
-model = tf.keras.models.load_model('image_classification_model.h5')
+model = tf.keras.models.load_model('best_model.h5')
 
 # Define class labels
 class_labels = ['rock', 'paper', 'scissors']
