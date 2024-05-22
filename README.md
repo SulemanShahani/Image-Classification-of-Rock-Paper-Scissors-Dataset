@@ -58,5 +58,5 @@ Click the "Upload" button to classify the uploaded image.
 
 ## Acknowledgments
 
-The pre-trained image classification model used in this project is based on TensorFlow's official tutorials.
+
 Inspiration for this project came from [https://github.com/KeithGalli].
